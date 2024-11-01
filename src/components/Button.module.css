@@ -1,0 +1,16 @@
+button {
+  padding: 0.75rem 2.5rem;
+  border-radius: 6px;
+  border: 0;
+  background: var(--button);
+  color: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-weight: 500;
+  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.1);
+}
+
+button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+}

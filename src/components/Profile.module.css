@@ -1,0 +1,13 @@
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  object-fit: cover;
+  margin-bottom: 2rem;
+}
+

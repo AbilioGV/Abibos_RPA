@@ -1,0 +1,47 @@
+.header {
+  background: var(--main);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 15rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.header a {
+  text-decoration: none;
+}
+
+.header a h1 {
+  color: var(--white);
+  font-size: 1.75rem;
+  font-weight: 700;
+  background: var(--white);
+  text-decoration: none;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.links {
+  display: flex;
+  gap: 2.5rem;
+}
+
+.links a {
+  text-decoration: none;
+  color: var(--component);
+  font-weight: 500;
+  position: relative;
+  padding: 0.5rem 0;
+  transition: color 0.2s ease;
+}
+
+.header button:hover {
+  background: var(--button);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+}
+
