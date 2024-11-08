@@ -30,7 +30,9 @@ export function Home() {
                   processos manuais em fluxos automatizados, garantindo mais
                   agilidade e produtividade para o seu negócio.
                 </p>
-                <Button>Fale conosco</Button>
+                <Link to="/pedido">
+                <Button variant="gradient">Comece agora</Button>
+                </Link>
               </div>
               <div className={styles.contentImg}>
                 <img
@@ -100,7 +102,7 @@ export function Home() {
                 </div>
               </div>
               <Link to="/pedido">
-                <Button>Realizar pedido</Button>
+                <Button variant="gradient">Realizar pedido</Button>
               </Link>
             </div>
             <p>
@@ -117,10 +119,10 @@ export function Home() {
                   <strong>Abilio Gonçalves</strong>
                   <p>Web Developer</p>
                   <div className={styles.icons}>
-                    <a href="https://github.com/AbilioGV">
+                    <a href="https://github.com/AbilioGV" target="_blank" rel="noopener noreferrer">
                       <GithubLogo size={32} color="black" />
                     </a>
-                    <a href="https://www.linkedin.com/in/abilio-gonçalves-developer/">
+                    <a href="https://www.linkedin.com/in/abilio-gonçalves-developer/" target="_blank" rel="noopener noreferrer">
                       <LinkedinLogo size={32} color="black" />
                     </a>
                   </div>
@@ -130,23 +132,23 @@ export function Home() {
                   <strong>Luis Felipe Tomaz</strong>
                   <p>Analista de crédito</p>
                   <div className={styles.icons}>
-                    <a href="https://github.com/LuisTomaz">
+                    <a href="https://github.com/LuisTomaz" target="_blank" rel="noopener noreferrer">
                       <GithubLogo size={32} color="black" />
                     </a>
-                    <a href="https://www.linkedin.com/in/luis-felipe-tomaz-b66b96209/">
+                    <a href="https://www.linkedin.com/in/luis-felipe-tomaz-b66b96209/" target="_blank" rel="noopener noreferrer">
                       <LinkedinLogo size={32} color="black" />
                     </a>
                   </div>
                 </div>
                 <div>
-                  <Profile image="https://media.licdn.com/dms/image/v2/D4D03AQEkYLcjDhcwkA/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1710785993978?e=1735776000&v=beta&t=xxRpLt0A3K4ACbYSwynpKNVNLucD1_gKtGOkVknRPYQ" />
+                  <Profile image="wendell.jpeg" />
                   <strong>Wendell Santos</strong>
                   <p>RPA Developer</p>
                   <div className={styles.icons}>
-                    <a href="https://github.com/Wen-developer">
+                    <a href="https://github.com/Wen-developer" target="_blank" rel="noopener noreferrer">
                       <GithubLogo size={32} color="black" />
                     </a>
-                    <a href="https://www.linkedin.com/in/wendell-santos-alves/">
+                    <a href="https://www.linkedin.com/in/wendell-santos-alves/" target="_blank" rel="noopener noreferrer">
                       <LinkedinLogo size={32} color="black" />
                     </a>
                   </div>
@@ -156,10 +158,10 @@ export function Home() {
                   <strong>Matheus Costa</strong>
                   <p>Data Analyst</p>
                   <div className={styles.icons}>
-                    <a href="https://github.com/matheuslisboadev">
+                    <a href="https://github.com/matheuslisboadev" target="_blank" rel="noopener noreferrer">
                       <GithubLogo size={32} color="black" />
                     </a>
-                    <a href="https://www.linkedin.com/in/matheuslisboadev/">
+                    <a href="https://www.linkedin.com/in/matheuslisboadev/" target="_blank" rel="noopener noreferrer">
                       <LinkedinLogo size={32} color="black" />
                     </a>
                   </div>
@@ -169,10 +171,10 @@ export function Home() {
                   <strong>Igor Felipe Jordão</strong>
                   <p>Web Developer</p>
                   <div className={styles.icons}>
-                    <a href="https://github.com/IgorFelipe10">
+                    <a href="https://github.com/IgorFelipe10" target="_blank" rel="noopener noreferrer">
                       <GithubLogo size={32} color="black" />
                     </a>
-                    <a href="https://www.linkedin.com/in/igor-felipe-jordão-4b8549269/">
+                    <a href="https://www.linkedin.com/in/igor-felipe-jordão-4b8549269/" target="_blank" rel="noopener noreferrer">
                       <LinkedinLogo size={32} color="black" />
                     </a>
                   </div>

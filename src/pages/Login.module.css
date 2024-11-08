@@ -1,0 +1,195 @@
+.authContainer {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.auth {
+  width: 100%;
+  max-width: 480px;
+  background: var(--component);
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  overflow: hidden;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--gray-300);
+  background-color: var(--white);
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 1.25rem;
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--secondary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.tabBtn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background-color: var(--primary);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.tabBtn.active {
+  color: var(--primary);
+}
+
+.tabBtn.active::after {
+  transform: scaleX(1);
+}
+
+.tabContent {
+  display: none;
+  padding: 2rem;
+  animation: fadeIn 0.5s ease forwards;
+  background-color: var(--component);
+}
+
+.tabContent.active {
+  display: block;
+}
+
+.authForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.authForm h2 {
+  color: var(--primary);
+  font-size: 1.75rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.authForm input[type="text"],
+.authForm input[type="email"],
+.authForm input[type="password"] {
+  width: 100%;
+  padding: 0.875rem 1rem 0.875rem 3rem;
+  border: 2px solid var(--gray-300);
+  border-radius: 8px;
+  font-size: 1rem;
+  color: var(--primary);
+  background-color: var(--white);
+  transition: all 0.2s ease;
+}
+
+
+.authForm input:focus {
+  outline: none;
+  border-color: var(--button);
+  box-shadow: 0 0 0 3px rgba(63, 56, 190, 0.1);
+}
+
+.authForm input::placeholder {
+  color: var(--gray-400);
+}
+
+.formFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 0.75rem 0;
+}
+
+.formFooter label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--secondary);
+  font-size: 0.95rem;
+}
+
+.formFooter input[type="checkbox"] {
+  accent-color: var(--button);
+  width: 16px;
+  height: 16px;
+}
+
+.forgot {
+  color: var(--button);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.forgot:hover {
+  color: var(--blue2);
+  text-decoration: underline;
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+/* Mensagens de erro */
+.errorMessage {
+  color: var(--error);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Mensagens de sucesso */
+.successMessage {
+  color: var(--success);
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.inputGroup {
+  position: relative;
+}
+
+.inputIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--secondary);
+  width: 20px;
+  height: 20px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 480px) {
+  .auth {
+    border-radius: 12px;
+  }
+  
+  .tabContent {
+    padding: 1.5rem;
+  }
+  
+  .authForm h2 {
+    font-size: 1.5rem;
+  }
+}

@@ -12,10 +12,12 @@
 
 
   --component:#F5F5F5;
-  --main:#1A1A1A;
-  --second:#666666;
+  --primary:#1A1A1A;
+  --secondary:#666666;
   --button:#3f38be;
   --blue2:#818CF8;
+  --success:#22C55E;
+  --error:#EF4444;
 }
 
 html {
@@ -30,7 +32,7 @@ html {
 
 body {
   background: var(--white);
-  color: var(--main);
+  color: var(--primary);
   -webkit-font-smoothing: antialiased;
 }
 

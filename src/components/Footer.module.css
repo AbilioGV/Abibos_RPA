@@ -1,5 +1,5 @@
 .footer {
-  background: #1A1A1A;
+  background: var(--primary);
   padding: 4rem 15rem 2rem;
   color: var(--component);
   margin-top: 4rem;
@@ -19,7 +19,7 @@
 }
 
 .footerColumn h3 {
-  color: var(--wh);
+  color: var(--white);
   font-size: 1.25rem;
   margin-bottom: 1rem;
   position: relative;
@@ -48,7 +48,7 @@
 
 .footerBottom {
   padding-top: 2rem;
-  border-top: 1px solid #333333;
+  border-top: 1px solid var(--gray-600);
   display: flex;
   justify-content: space-between;
   align-items: center;

@@ -4,7 +4,6 @@ form {
   padding: 2rem;
   background-color: white;
   border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -14,37 +13,40 @@ h2 {
   text-align: center;
 }
 
+form p {
+  padding: 1rem;
+  text-align: center;
+  color: var(--secondary);
+}
+
 h3 {
-  color: var(--main);
+  color: var(--primary);
   font-size: 1.25rem;
   margin: 1.5rem 0 1rem;
   padding-bottom: 0.5rem;
-  border-bottom: 2px solid var(--primary);
 }
 
 section {
   margin-bottom: 2rem;
   padding: 1.5rem;
-  background-color: var(--secondary);
   border-radius: 8px;
 }
 
-input[type="text"],
-input[type="email"],
-input[type="tel"],
-input[type="name"],
-input[type="number"],
-input[type="date"],
+section input[type="text"],
+section input[type="email"],
+section input[type="tel"],
+section input[type="name"],
+section input[type="number"],
+section input[type="date"],
 select,
 textarea {
   width: 100%;
-  padding: 0.75rem 1rem;
-  margin-bottom: 1rem;
-  border: 1px solid var(--gray-100);
-  border-radius: 6px;
+  padding: 0.875rem 1rem;
+  border: 2px solid var(--gray-300);
+  border-radius: 8px;
   font-size: 1rem;
-  color: var(--second);
-  background-color: white;
+  color: var(--primary);
+  background-color: var(--white);
   transition: all 0.2s ease;
 }
 
@@ -69,20 +71,8 @@ textarea {
   min-height: 100px;
 }
 
-label {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  color: var(--text);
-  margin-bottom: 1rem;
-}
-
-input[type="checkbox"] {
-  width: 1.25rem;
-  height: 1.25rem;
-  border: 2px solid var(--border);
-  border-radius: 4px;
-  cursor: pointer;
+.formBtn {
+  margin-left: 24px;
 }
 
 @media (min-width: 640px) {
@@ -101,21 +91,6 @@ input[type="checkbox"] {
   }
 }
 
-/* Estados de validação */
-input:invalid,
-select:invalid,
-textarea:invalid {
-  border-color: var(--error);
-}
-
-input:valid,
-select:valid,
-textarea:valid {
-  border-color: var(--success);
-}
-
-/* Placeholder */
 ::placeholder {
-  color: var(--text-light);
   opacity: 0.7;
 }

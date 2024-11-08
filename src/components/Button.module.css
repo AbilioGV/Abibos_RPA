@@ -1,16 +1,89 @@
-button {
-  padding: 0.75rem 2.5rem;
-  border-radius: 6px;
-  border: 0;
-  background: var(--button);
-  color: var(--white);
-  cursor: pointer;
-  transition: all 0.2s ease;
-  font-weight: 500;
-  box-shadow: 0 2px 4px rgba(79, 70, 229, 0.1);
+/* Estilos base do botão */
+.button {
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    cursor: pointer;
 }
 
-button:hover {
-  transform: translateY(-1px);
-  box-shadow: 0 4px 12px rgba(79, 70, 229, 0.2);
+/* Estilo 1 - Gradiente moderno */
+.button-gradient {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    color: white;
+    border: none;
+    box-shadow: 0 4px 6px rgba(99, 102, 241, 0.2);
+}
+
+.button-gradient:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 8px rgba(99, 102, 241, 0.3);
+}
+
+/* Estilo 2 - Outline com efeito hover */
+.button-outline {
+    background: transparent;
+    border: 2px solid #3b82f6;
+    color: #3b82f6;
+}
+
+.button-outline:hover {
+    background: #3b82f6;
+    color: white;
+}
+
+/* Estilo 3 - Minimalista com underline */
+.button-minimal {
+    background: none;
+    border: none;
+    color: #1f2937;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.button-minimal::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #1f2937;
+    transition: width 0.3s ease;
+}
+
+.button-minimal:hover::after {
+    width: 100%;
+}
+
+/* Estilo 4 - Botão com ícone */
+.button-icon {
+    background: #2563eb;
+    color: white;
+    border: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.button-icon svg {
+    width: 16px;
+    height: 16px;
+}
+
+.button-icon:hover {
+    background: #1d4ed8;
+}
+
+/* Estilo 5 - Glassmorphism */
+.button-glass {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+}
+
+.button-glass:hover {
+    background: rgba(255, 255, 255, 0.3);
 }

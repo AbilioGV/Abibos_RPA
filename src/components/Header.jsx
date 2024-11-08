@@ -10,7 +10,9 @@ export function Header() {
         <a href="#services">Serviços</a>
         <a href="#about">Quem somos</a>
       </div>
-      <Button>Faça login</Button>
+      <Link to="/login">
+        <Button variant="glass">Faça seu login</Button>
+      </Link>
     </header>
   );
 }

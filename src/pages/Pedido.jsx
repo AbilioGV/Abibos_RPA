@@ -48,7 +48,7 @@ export function Pedido() {
   return (
     <form onSubmit={handleSubmit}>
       <h2 id="pedido">Pedido de Serviço</h2>
-
+      <p>Preencha este formulário para que possamos entender inicialmente seu problema e, em seguida, entrar em contato para oferecer o suporte necessário.</p>
       <section>
         <h3>Informações de Contato</h3>
         <input name="clientName" type="name" placeholder="Nome do Cliente" onChange={handleChange} required />
@@ -79,40 +79,16 @@ export function Pedido() {
           <option value="Média">Média</option>
           <option value="Baixa">Baixa</option>
         </select>
-        <input name="deadline" type="date" placeholder="Prazo para Entrega" onChange={handleChange} />
-      </section>
-
-      <section>
-        <h3>Requisitos Técnicos</h3>
-        <textarea name="systemsUsed" placeholder="Sistemas e Softwares Utilizados" onChange={handleChange} rows="3" />
-        <textarea name="dataAccess" placeholder="Acesso a Dados Necessário" onChange={handleChange} rows="2" />
-        <select name="executionEnvironment" onChange={handleChange}>
-          <option value="">Ambiente de Execução</option>
-          <option value="Nuvem">Nuvem</option>
-          <option value="Servidor Local">Servidor Local</option>
-          <option value="Máquina do Cliente">Máquina do Cliente</option>
-        </select>
-        <textarea name="securityRequirements" placeholder="Requisitos de Segurança" onChange={handleChange} rows="3" />
-      </section>
-
-      <section>
-        <h3>Detalhes do Fluxo de Trabalho</h3>
-        <textarea name="workflowSteps" placeholder="Etapas do Processo" onChange={handleChange} rows="3" />
-        <textarea name="processInputs" placeholder="Entradas do Processo" onChange={handleChange} rows="3" />
-        <textarea name="processOutputs" placeholder="Saídas do Processo" onChange={handleChange} rows="3" />
-        <textarea name="validationRequirements" placeholder="Requisitos de Validação" onChange={handleChange} rows="3" />
       </section>
 
       <section>
         <h3>Observações e Consentimento</h3>
         <textarea name="additionalComments" placeholder="Comentários Adicionais" onChange={handleChange} rows="3" />
-        <label>
-          <input name="acceptTerms" type="checkbox" onChange={handleChange} />
-          Aceito os termos e condições
-        </label>
       </section>
 
+      <div className={styles.formBtn}>
       <Button type="submit">Enviar Pedido</Button>
+      </div>
     </form>
   );
 };
