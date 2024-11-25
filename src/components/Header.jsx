@@ -16,6 +16,10 @@ export function Header() {
       <div className={styles.links}>
         <a href="#services">Serviços</a>
         <a href="#about">Quem somos</a>
+        {user?.role === 1 && (
+          <Link to="/dashboard">Pedidos</Link>
+        ) 
+        }
       </div>
 
       {user ? (

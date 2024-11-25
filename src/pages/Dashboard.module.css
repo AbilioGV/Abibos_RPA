@@ -1,0 +1,112 @@
+.dashboardContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.dashboardContainer h1 {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  margin-bottom: 30px;
+  font-size: 2rem;
+}
+
+.orderList {
+  overflow-x: auto;
+}
+
+.orderList table {
+  width: 100%;
+  overflow: hidden;
+  border-collapse: separate;
+  border-spacing: 0;
+  background-color: var(--gray-100);
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.orderList thead {
+   background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  color: white;
+}
+
+.orderList th,
+.orderList td {
+  border: 2px solid var(--gray-300);
+  font-size: 0.9rem;
+  padding: 12px 15px;
+  text-align: center;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 300px;
+}
+
+.orderList th {
+  border: 0;
+  font-size: 0.8rem;
+  text-align: center;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.orderList tbody tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+.orderList tbody tr:hover {
+  background-color: #e6f2ff;
+  transition: background-color 0.3s ease;
+}
+
+.statusColor {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.status-pendente {
+  background-color: #f39c12; 
+}
+
+.status-aprovado {
+  background-color: #2ecc71; 
+}
+
+.status-rejeitado {
+  background-color: #e74c3c;
+}
+
+@media screen and (max-width: 768px) {
+  .dashboardContainer {
+    padding: 10px;
+  }
+
+  .orderList table {
+    font-size: 0.9rem;
+  }
+
+  .orderList th,
+  .orderList td {
+    padding: 10px;
+  }
+}
+
+.expandedDetails {
+  text-align: start;
+  line-height: 30px;
+}
+
+.expandButton {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+margin-top: 4px;
+}

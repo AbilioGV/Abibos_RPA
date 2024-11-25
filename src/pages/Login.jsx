@@ -5,12 +5,15 @@ import { Envelope, User, Lock } from "@phosphor-icons/react";
 import { useAuth } from "../contexts/auth-context";
 import { Navigate, useNavigate } from "react-router-dom";
 
+
 export function Login() {
   const navigate = useNavigate();
 
   const { user, setUser } = useAuth();
 
   const [activeTab, setActiveTab] = useState("login");
+
+ 
 
   const handleSubmitLogin = async (e) => {
     e.preventDefault();
