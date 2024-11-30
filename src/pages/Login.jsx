@@ -3,7 +3,7 @@ import { Button } from "../components/Button";
 import styles from "./Login.module.css";
 import { Envelope, User, Lock } from "@phosphor-icons/react";
 import { useAuth } from "../contexts/auth-context";
-import { Navigate, useNavigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 
 export function Login() {
@@ -13,7 +13,7 @@ export function Login() {
 
   const [activeTab, setActiveTab] = useState("login");
 
- 
+
 
   const handleSubmitLogin = async (e) => {
     e.preventDefault();
@@ -31,7 +31,9 @@ export function Login() {
       }),
       headers: {
         "content-type": "application/json",
+       
       },
+
     });
 
     if (!response.ok) {
@@ -84,29 +86,27 @@ export function Login() {
 
     navigate("/");
 
-    
+
   };
 
   if (user) {
-    return <Navigate to="/"/>
+    return <Navigate to="/" />
   }
-  
+
   return (
     <div className={styles.authContainer}>
       <div className={styles.auth}>
         <div className={styles.tabs}>
           <button
-            className={`${styles.tabBtn} ${
-              activeTab === "login" ? styles.active : ""
-            }`}
+            className={`${styles.tabBtn} ${activeTab === "login" ? styles.active : ""
+              }`}
             onClick={() => setActiveTab("login")}
           >
             Login
           </button>
           <button
-            className={`${styles.tabBtn} ${
-              activeTab === "register" ? styles.active : ""
-            }`}
+            className={`${styles.tabBtn} ${activeTab === "register" ? styles.active : ""
+              }`}
             onClick={() => setActiveTab("register")}
           >
             Cadastro
@@ -114,9 +114,8 @@ export function Login() {
         </div>
 
         <div
-          className={`${styles.tabContent} ${
-            activeTab === "login" ? styles.active : ""
-          }`}
+          className={`${styles.tabContent} ${activeTab === "login" ? styles.active : ""
+            }`}
         >
           <h2>Bem-vindo de volta!</h2>
           <form className={styles.authForm} onSubmit={handleSubmitLogin}>
@@ -135,11 +134,11 @@ export function Login() {
             </div>
             <div className={styles.formFooter}>
               <label>
-                <input type="checkbox" />
-                <span>Lembrar-me</span>
+                {/* <input type="checkbox" />
+                <span>Lembrar-me</span> */}
               </label>
               <a href="#" className={styles.forgot}>
-                Esqueceu a senha?
+                {/* Esqueceu a senha? */}
               </a>
             </div>
             <Button variant="gradient" type="submit">
@@ -149,9 +148,8 @@ export function Login() {
         </div>
 
         <div
-          className={`${styles.tabContent} ${
-            activeTab === "register" ? styles.active : ""
-          }`}
+          className={`${styles.tabContent} ${activeTab === "register" ? styles.active : ""
+            }`}
         >
           <h2>Crie sua conta</h2>
           <form className={styles.authForm} onSubmit={handleSubmitRegister}>
@@ -189,7 +187,9 @@ export function Login() {
             <div className={styles.formFooter}>
               <label>
                 <input type="checkbox" required />
-                <span>Aceito os termos e condições</span>
+                <Link to="/termos" >
+                  <span>Aceito os termos e condições</span>
+                </Link>
               </label>
             </div>
             <Button variant="gradient" type="submit">

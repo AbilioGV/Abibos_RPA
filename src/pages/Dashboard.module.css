@@ -84,6 +84,18 @@
   background-color: #e74c3c;
 }
 
+.expandedDetails {
+  text-align: start;
+  line-height: 30px;
+}
+
+.expandButton {
+  border: 0;
+  background: 0;
+  cursor: pointer;
+margin-top: 4px;
+}
+
 @media screen and (max-width: 768px) {
   .dashboardContainer {
     padding: 10px;
@@ -99,14 +111,3 @@
   }
 }
 
-.expandedDetails {
-  text-align: start;
-  line-height: 30px;
-}
-
-.expandButton {
-  border: 0;
-  background: 0;
-  cursor: pointer;
-margin-top: 4px;
-}

@@ -5,9 +5,11 @@ import { Button } from "../components/Button";
 
 import "../global.css";
 import { useAuth } from "../contexts/auth-context";
-import { Navigate } from "react-router-dom";
+import { Link, Navigate, useNavigate } from "react-router-dom";
 
 export function Pedido() {
+
+  const navigate = useNavigate()
 
   const { user } = useAuth();
 
@@ -32,6 +34,8 @@ export function Pedido() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
+    const userToken = user.token
+
     /*     const processName = formData.get("processName")
 
     const processDescription = formData.get("processDescription")
@@ -49,17 +53,24 @@ export function Pedido() {
       body: JSON.stringify(formData),
       headers: {
         "content-type": "application/json",
+        Authorization: `Bearer ${userToken}`,
       },
     });
 
     const data = await response.json();
+
+    navigate("/")
+
+    return data
   };
 
-  
+
   if (!user) {
-    return <Navigate to="/login"/>
+    return <Navigate to="/login" />
   }
-  
+
+
+
   return (
     <form onSubmit={handleSubmit}>
       <h2 id="pedido">Pedido de Serviço</h2>
@@ -134,7 +145,9 @@ export function Pedido() {
           value={formData.comentario}
           rows="3"
         />
+        
       </section>
+
 
       <div className={styles.formBtn}>
         <Button type="submit">Enviar Pedido</Button>

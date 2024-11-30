@@ -4,6 +4,7 @@ import { Pedido } from "./pages/Pedido";
 import { Root } from "./components/Root";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
+import { Termos } from "./pages/termos";
 
 export const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root />}>
@@ -11,5 +12,6 @@ export const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/pedido" element={<Pedido />} />
     <Route path="/login" element={<Login />} />
     <Route path="/dashboard" element={<Dashboard />} />
+    <Route path="/termos" element={<Termos />} />
   </Route>
 ));

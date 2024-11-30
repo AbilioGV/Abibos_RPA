@@ -1,5 +1,6 @@
 import { LinkedinLogo, GithubLogo, EnvelopeOpen } from "@phosphor-icons/react";
 import styles from "./Footer.module.css";
+import { Link } from "react-router-dom";
 
 export function Footer() {
   return (
@@ -9,26 +10,24 @@ export function Footer() {
           <h3>Empresa</h3>
           <a href="#about">Sobre nós</a>
           <a href="#services">Serviços</a>
-          <a href="#">Carreira</a>
-          <a href="#">Contato</a>
         </div>
-        
+
         <div className={styles.footerColumn}>
           <h3>Soluções</h3>
-          <a href="#">Automação de PDF</a>
-          <a href="#">Web Scraping</a>
-          <a href="#">Manipulação de Excel</a>
-          <a href="#">Processamento de Dados</a>
+          <a href="#services">Automação de PDF</a>
+          <a href="#services">Web Scraping</a>
+          <a href="#services">Preenchimento de Formulários</a>
+          <a href="#services">Manipulação de Excel</a>
         </div>
-        
+
         <div className={styles.footerColumn}>
           <h3>Recursos</h3>
-          <a href="#">Documentação</a>
-          <a href="#">Blog</a>
-          <a href="#">FAQ</a>
+          <Link to="/termos" >
+            <span>Aceito os termos e condições</span>
+          </Link>
           <a href="#">Suporte</a>
         </div>
-        
+
         <div className={styles.footerColumn}>
           <h3>Contato</h3>
           <p>contato@abibos.com</p>
@@ -36,7 +35,7 @@ export function Footer() {
           <p>São Paulo, SP</p>
         </div>
       </div>
-      
+
       <div className={styles.footerBottom}>
         <p>&copy; 2024 Abibos. Todos os direitos reservados.</p>
         <div className={styles.socialLinks}>

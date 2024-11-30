@@ -211,3 +211,97 @@
   }
 }
 
+@media (max-width: 1200px) {
+  .content {
+    padding: 0 2rem; /* Adiciona padding nas laterais */
+  }
+
+  .firstContent {
+    padding: 1rem;
+  }
+
+  .card {
+    width: 100%; /* Faz os cards ocuparem largura total */
+    max-width: 500px; /* Limita a largura máxima */
+  }
+}
+
+@media (max-width: 992px) {
+  .content h1 {
+    font-size: 2.5rem;
+    line-height: 3.5rem;
+  }
+
+  .leftContent h1 {
+    font-size: 2rem;
+  }
+
+  .firstContent {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .leftContent,
+  .contentImg {
+    min-width: 100%;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .leftContent {
+    align-items: center;
+    text-align: center;
+  }
+
+  .leftContent p {
+    text-align: center;
+  }
+
+  .leftContent a,
+  .leftContent button {
+    align-self: center;
+  }
+}
+
+@media (max-width: 576px) {
+  .mainContent {
+    justify-content: flex-start;
+    padding: 1rem;
+  }
+
+  .content {
+    gap: 3rem;
+    margin-top: 2rem;
+  }
+
+  .content h1 {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .leftContent h1 {
+    font-size: 1.8rem;
+  }
+
+  .leftContent p {
+    font-size: 1rem;
+  }
+
+  .cardContainer {
+    margin: 2rem 0;
+  }
+
+  .card {
+    padding: 1.5rem;
+    height: auto;
+  }
+
+  .profileContainer {
+    gap: 2rem;
+    margin: 2rem 0;
+  }
+
+  .icons {
+    gap: 1rem;
+  }
+}
