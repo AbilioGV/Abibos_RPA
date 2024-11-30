@@ -37,7 +37,7 @@ export function Home() {
               <div className={styles.contentImg}>
                 <img
                   src="robot.png"
-                  alt="Graident Ai Robot Vectorart"
+                  alt="Mascote da Abibos, Abibô - Robô branco, com visor azul escuro de rosto, olhos azul mais claro, subindo e descendo levemente na tela para dar impressão de estar flutuando"
                 />
               </div>
             </div>
@@ -102,7 +102,7 @@ export function Home() {
                 </div>
               </div>
               <Link to="/pedido">
-                <Button variant="gradient">Realizar pedido</Button>
+                <Button variant="gradient">Solicitar processo</Button>
               </Link>
             </div>
             <p>

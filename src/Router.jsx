@@ -5,6 +5,7 @@ import { Root } from "./components/Root";
 import { Login } from "./pages/Login";
 import { Dashboard } from "./pages/Dashboard";
 import { Termos } from "./pages/termos";
+import { Sucesso } from "./pages/Sucesso";
 
 export const router = createBrowserRouter(createRoutesFromElements(
   <Route path="/" element={<Root />}>
@@ -13,5 +14,6 @@ export const router = createBrowserRouter(createRoutesFromElements(
     <Route path="/login" element={<Login />} />
     <Route path="/dashboard" element={<Dashboard />} />
     <Route path="/termos" element={<Termos />} />
+    <Route path="/sucesso" element={<Sucesso />} />
   </Route>
 ));

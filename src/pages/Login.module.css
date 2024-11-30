@@ -169,6 +169,12 @@
   height: 20px;
 }
 
+.verificar {
+  font-size: 0.8rem;
+  padding: 0;
+  margin-bottom: 12px;
+}
+
 @keyframes fadeIn {
   from {
     opacity: 0;

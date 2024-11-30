@@ -39,7 +39,6 @@ export function Footer() {
       <div className={styles.footerBottom}>
         <p>&copy; 2024 Abibos. Todos os direitos reservados.</p>
         <div className={styles.socialLinks}>
-          <a href="#"><LinkedinLogo size={24} /></a>
           <a href="https://github.com/AbilioGV/Abibos_RPA" target="_blank" rel="noopener noreferrer"><GithubLogo size={24} /></a>
           <a href="#"><EnvelopeOpen size={24} /></a>
         </div>

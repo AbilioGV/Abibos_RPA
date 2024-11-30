@@ -59,7 +59,7 @@ export function Pedido() {
 
     const data = await response.json();
 
-    navigate("/")
+    navigate("/sucesso")
 
     return data
   };
@@ -73,7 +73,7 @@ export function Pedido() {
 
   return (
     <form onSubmit={handleSubmit}>
-      <h2 id="pedido">Pedido de Serviço</h2>
+      <h2 id="pedido">Solicitação de automação</h2>
       <p>
         Preencha este formulário para que possamos entender inicialmente seu
         problema e, em seguida, entrar em contato para oferecer o suporte
@@ -129,7 +129,7 @@ export function Pedido() {
           <option value="Mensal">Mensal</option>
         </select>
         <select name="volume" onChange={handleChange} value={formData.volume}>
-          <option value="">Prioridade do Projeto</option>
+          <option value="">Densidade do processo</option>
           <option value="Alta">Alta</option>
           <option value="Média">Média</option>
           <option value="Baixa">Baixa</option>
@@ -145,7 +145,14 @@ export function Pedido() {
           value={formData.comentario}
           rows="3"
         />
-        
+        <div className={styles.formFooter}>
+              <label>
+                <input type="checkbox" required />
+                <Link to="/termos" >
+                  <span>Aceito os termos e condições</span>
+                </Link>
+              </label>
+            </div>
       </section>
 
 

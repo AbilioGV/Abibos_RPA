@@ -13,6 +13,34 @@ export function Login() {
 
   const [activeTab, setActiveTab] = useState("login");
 
+  const [passwordStrength, setPasswordStrength] = useState("");
+  const [formError, setFormError] = useState("");
+
+  // Função para verificar a força da senha
+  const checkPasswordStrength = (password) => {
+    const minLength = 8;
+    const hasUpperCase = /[A-Z]/.test(password);
+    const hasLowerCase = /[a-z]/.test(password);
+    const hasNumber = /\d/.test(password);
+    const hasSpecialChar = /[!@#$%^&*(),.?":{}|<>]/.test(password);
+
+    if (password.length < minLength) return "Muito fraca";
+    if (!hasUpperCase || !hasLowerCase || !hasNumber || !hasSpecialChar) {
+      return "Fraca";
+    }
+    if (password.length >= minLength && hasUpperCase && hasLowerCase && hasNumber && hasSpecialChar) {
+      return "Forte";
+    }
+
+    return "Boa";
+  };
+
+  const handlePasswordChange = (e) => {
+    const password = e.target.value;
+    const strength = checkPasswordStrength(password);
+    setPasswordStrength(strength);
+    setFormError(""); // Limpa mensagens de erro ao digitar
+  };
 
 
   const handleSubmitLogin = async (e) => {
@@ -31,7 +59,7 @@ export function Login() {
       }),
       headers: {
         "content-type": "application/json",
-       
+
       },
 
     });
@@ -64,6 +92,11 @@ export function Login() {
       return alert("As senhas não coincidem");
     }
 
+    // Verificar se a senha é forte
+    if (passwordStrength !== "Forte") {
+      return setFormError("A senha deve atender aos requisitos de força");
+    }
+
     const response = await fetch("http://localhost:3000/register", {
       method: "POST",
       body: JSON.stringify({
@@ -92,6 +125,8 @@ export function Login() {
   if (user) {
     return <Navigate to="/" />
   }
+
+
 
   return (
     <div className={styles.authContainer}>
@@ -172,9 +207,11 @@ export function Login() {
                 type="password"
                 name="password"
                 placeholder="Senha"
+                onChange={handlePasswordChange}
                 required
               />
             </div>
+
             <div className={styles.inputGroup}>
               <Lock className={styles.inputIcon} size={20} />
               <input
@@ -183,6 +220,15 @@ export function Login() {
                 placeholder="Confirmar senha"
                 required
               />
+            </div>
+
+            <div className={styles.passwordInfo}>
+              <p className={styles.verificar}>
+                A senha deve conter ao menos 8 caracteres, uma letra maiúscula, um caractere especial e um número.
+              </p>
+              <p className={styles.strength}>
+                Força da senha: <strong>{passwordStrength}</strong>
+              </p>
             </div>
             <div className={styles.formFooter}>
               <label>

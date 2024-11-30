@@ -1,0 +1,11 @@
+.sucesso {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+  height: 60vh;
+}
+
+.sucesso p {
+  margin: 40px;
+}

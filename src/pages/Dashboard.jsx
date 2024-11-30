@@ -118,7 +118,7 @@ export function Dashboard() {
                   <tr className={styles.expandedDetailsRow}>
                     <td colSpan="6">
                       <div className={styles.expandedDetails}>
-                        <p><strong>Empresa:</strong> {order.cd_company}</p>
+                        <p><strong>Empresa:</strong> {order.ds_company}</p>
                         <p><strong>Processo:</strong> {order.ds_name_process}</p>
                         <p><strong>Descrição Detalhada:</strong> {order.ds_process}</p>
                         <p><strong>Objetivo:</strong> {order.ds_obj_aut}</p>
